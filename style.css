@@ -191,6 +191,7 @@ main {
   text-decoration: line-through;
   font-weight: bold;
   color: hsl(219, 9%, 45%);
+  margin: 5px;
 }
 
 .product-no {
@@ -331,9 +332,11 @@ button {
   backdrop-filter: brightness(0.5);
 }
 
-/* .icon-directions img{
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
-} */
+.prices {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
 
 .product-no p {
   margin: 0;
@@ -387,6 +390,12 @@ button {
 }
 
 @media (max-width: 800px) {
+  .prices {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .closer-view.products-container {
     display: none;
   }

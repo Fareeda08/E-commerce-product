@@ -193,7 +193,27 @@ document.querySelector("body").addEventListener("click", function (ev) {
     switchImg(`product-${i}`);
   }
 
- 
+  //Removing items from the cart
+  const deleteBtn = ev.target.closest(".delete-btn");
+  if (deleteBtn) {
+    const li = ev.target.closest("li");
+
+    const index = state.cart.findIndex(
+      (cart) =>
+        cart.product_img ===
+        li.querySelector(".selected-cart-product").getAttribute("src"),
+    );
+
+    state.cart.splice(index, 1);
+    cartItemsContainer.innerHTML = "";
+
+    if (state.cart.length === 0) {
+      const markup = "<p>Your cart is empty...</p>";
+      cartItemsContainer.insertAdjacentHTML("afterbegin", markup);
+    } else {
+      state.cart.forEach((cart) => renderCart(cart));
+    }
+  }
 });
 
 //Switching the images
@@ -218,6 +238,8 @@ document.querySelectorAll(".products").forEach((product) => {
   // const product = ev.target.closest(".product");
   product.addEventListener("click", function (ev) {
     const selPro = ev.target.classList[1];
+
+    if (!selPro) return;
 
     const productSrc = switchImg(selPro);
 
