@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="overlay hidden"></div>
+
+    <nav>
+      <ul>
+        <img class="menu-btn" src="./images/icon-menu.svg" alt="menu" />
+        <img class="logo" src="./images/logo.svg" alt="logo" />
+
+        <ul class="nav-list">
+          <img class="close-btn" src="./images/icon-close.svg" alt="" />
+
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </ul>
+
+      <div class="cart-container">
+        <div>
+          <img class="cart-btn" src="./images/icon-cart.svg" alt="Cart" />
+
+          <span class="hover-product-no">0</span>
+
+          <div class="cart-items hidden">
+            <p class="cart">Cart</p>
+
+            <ul>
+              <p>Your Cart is empty...</p>
+            </ul>
+
+            <button class="checkout-btn hidden" type="submit">Checkout</button>
+          </div>
+        </div>
+
+        <img class="avatar" src="./images/image-avatar.png" alt="" />
+      </div>
+    </nav>
+
+    <hr />
+
+    <main>
+      <div class="products-container">
+        <img
+          class="selected-product-sm selected-products"
+          src="./images/image-product-1.jpg"
+          alt=""
+        />
+        <img
+          class="selected product selected-products"
+          src="./images/image-product-1.jpg"
+          alt=""
+        />
+
+        <span class="icon-directions hidden">
+          <img class="previous" src="./images/icon-previous.svg" alt="" />
+          <img class="next" src="./images/icon-next.svg" alt="" />
+        </span>
+
+        <ul class="products">
+          <li class="current-product">
+            <img
+              class="product product-1 selected-product"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="sneaker_1"
+            />
+          </li>
+          <li>
+            <img
+              class="product product-2"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="sneaker_2"
+            />
+          </li>
+          <li>
+            <img
+              class="product product-3"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="sneaker_3"
+            />
+          </li>
+          <li>
+            <img
+              class="product product-4"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="sneaker_4"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <div class="product-info">
+        <p class="product-name">Sneaker Company</p>
+        <h2>Fall Limited Edition Sneakers</h2>
+
+        <p class="about-product">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+
+        <span class="current-price"
+          >$125.00 <span class="discount">50%</span></span
+        >
+        <p class="previous-price">$250.00</p>
+
+        <div class="add-to-cart_container">
+          <span class="product-no">
+            <img
+              class="minus product-no-btn"
+              src="./images/icon-minus.svg"
+              alt="minus"
+            />
+            <p>0</p>
+            <img
+              class="plus product-no-btn"
+              src="./images/icon-plus.svg"
+              alt="plus"
+            />
+          </span>
+          <button type="button" class="add-to-cart">
+            <img src="./images/icon-cart.svg" alt="add-to-cart" /> Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="products-container closer-view hidden">
+      <span
+        ><img class="close-btn" src="./images/icon-close.svg" alt=""
+      /></span>
+
+      <img
+        class="selected product selected-products"
+        src="./images/image-product-1.jpg"
+        alt=""
+      />
+
+      <span class="icon-directions">
+        <img class="previous" src="./images/icon-previous.svg" alt="" />
+        <img class="next" src="./images/icon-next.svg" alt="" />
+      </span>
+
+      <ul class="products">
+        <li class="current-product">
+          <img
+            class="product product-1 selected-product"
+            src="./images/image-product-1-thumbnail.jpg"
+            alt="sneaker_1"
+          />
+        </li>
+        <li>
+          <img
+            data-no="2"
+            class="product product-2"
+            src="./images/image-product-2-thumbnail.jpg"
+            alt="sneaker_2"
+          />
+        </li>
+        <li>
+          <img
+            data-no="3"
+            class="product product-3"
+            src="./images/image-product-3-thumbnail.jpg"
+            alt="sneaker_3"
+          />
+        </li>
+        <li>
+          <img
+            data-no="4"
+            class="product product-4"
+            src="./images/image-product-4-thumbnail.jpg"
+            alt="sneaker_4"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
